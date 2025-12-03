@@ -63,7 +63,7 @@ function loadImages() {
         { name: 'player', src: 'assets/image1.png' },
         { name: 'monster', src: 'assets/image2.png' },
         { name: 'coin', src: 'assets/image3.png' },
-        { name: 'bg', src: 'assets/bg.png' }
+        { name: 'bg', src: 'assets/image4.png' }
     ];
 
     let loadedCount = 0;
