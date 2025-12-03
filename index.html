@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siamese Cat Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen">
+        <div class="start-content">
+            <h1 class="game-title">🐱 Siamese Cat Adventure 🐱</h1>
+            <p class="game-subtitle">Help the Siamese cat reach home safely!</p>
+            <div class="instructions">
+                <h3>How to Play:</h3>
+                <p>🎮 W / A / D - Move and Jump</p>
+                <p>🦘 Press W again in air - Double Jump</p>
+                <p>💨 Shift - Dash (requires Fish Snack)</p>
+                <p>🪙 Collect at least 7 coins to win</p>
+                <p>⚠️ Avoid monsters!</p>
+                <p>⏱️ Complete within 90 seconds</p>
+            </div>
+            <button id="startButton" class="game-button">Start Adventure</button>
+        </div>
+    </div>
+
+    <!-- Game Container -->
+    <div id="gameContainer" style="display: none;">
+        <!-- HUD -->
+        <div id="hud">
+            <div class="hud-item">
+                <span class="hud-label">Coins:</span>
+                <span id="coinCount">0 / 10</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">Time:</span>
+                <span id="timer">90s</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">Controls:</span>
+                <span class="hud-text">W/A/D | Shift: Dash</span>
+            </div>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <!-- Dialogue Box -->
+        <div id="dialogueBox" class="dialogue-box" style="display: none;">
+            <div class="dialogue-content">
+                <h3 class="dialogue-title">Choose Your Power-Up!</h3>
+                <p class="dialogue-text">Select one item to help you on your journey:</p>
+                <div class="dialogue-options">
+                    <button class="option-button" data-item="spring">
+                        <span class="option-icon">🦘</span>
+                        <span class="option-name">Spring</span>
+                        <span class="option-desc">Higher jumps for 5s</span>
+                    </button>
+                    <button class="option-button" data-item="fish">
+                        <span class="option-icon">🐟</span>
+                        <span class="option-name">Fish Snack</span>
+                        <span class="option-desc">Speed + Dash for 5s</span>
+                    </button>
+                    <button class="option-button" data-item="balloon">
+                        <span class="option-icon">🎈</span>
+                        <span class="option-name">Balloon</span>
+                        <span class="option-desc">Float gently for 5s</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ending Screen -->
+    <div id="endingScreen" class="screen" style="display: none;">
+        <div class="ending-content">
+            <h1 id="endingTitle" class="ending-title"></h1>
+            <p id="endingMessage" class="ending-message"></p>
+            <div id="endingStats" class="ending-stats"></div>
+            <button id="restartButton" class="game-button">Restart Adventure</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
